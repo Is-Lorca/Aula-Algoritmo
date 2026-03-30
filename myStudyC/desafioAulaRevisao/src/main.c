@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdbool.h>
 #include <string.h>
 
 int dobro(int numero){
@@ -15,7 +14,6 @@ float metade(int numero){
 
 int main(){
     // Declaração de variáveis:
-    bool negativo;
     int numero, dobrado;
     float dividido;
     char oqueE[7];
@@ -23,16 +21,13 @@ int main(){
     do{
         printf("Insira um número inteiro positivo: ");
         scanf("%d", &numero);
-        // Quebra o loop, pois só será acessado depois que for checado que o numero é maior que 0
-        negativo = false;
 
         // Checa se o número é positivo ou negativo
         if(numero<0){
             printf("\nO número não pode ser negativo, tente novamente.\n\n");
-            negativo = true;
         }
     // Enquanto a var negativo for true, repita
-    }while(negativo == true);
+    }while(numero < 0);
 
     // Chama funções
     dobrado = dobro(numero);
