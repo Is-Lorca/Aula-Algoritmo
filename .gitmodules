@@ -1,3 +1,6 @@
 [submodule "myStudyC/DesafioMultiploCinquenta"]
 	path = myStudyC/DesafioMultiploCinquenta
 	url = https://github.com/Is-Lorca/Desafio-Multiplo-50.git
+[submodule "myStudyC/Exercicio-String-Vetores-Arquivos"]
+	path = myStudyC/Exercicio-String-Vetores-Arquivos
+	url = https://github.com/Is-Lorca/Exercicio-String-Vetores-Arquivos.git
