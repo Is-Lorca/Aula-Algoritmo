@@ -22,7 +22,7 @@ void inserirFinal(struct No **head, int x){
         *head = novo; // coloque o head no novo
     }
 
-    struct No *aux = head; // cria um auxiliar
+    struct No *aux = *head; // cria um auxiliar
     while(aux -> prox != NULL){ // enquanto o ponteiro do auxiliar não for null, continue
         aux = aux -> prox; // o auxiliar passa para a posição do proximo do auxiliar
     }
@@ -54,9 +54,6 @@ void imprimirLista(struct No *head){
 
 int main(){
     struct No *head = NULL;
-
-    
-    
 
     return 0;
 }

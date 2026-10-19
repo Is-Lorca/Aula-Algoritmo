@@ -22,7 +22,7 @@ void inserirInicio(struct No **head, int x) { // ** ponteiro apontando para pont
     *head = novo; // agora, head aponta para o valor do novo (que ainda será inserido)
 }
 
-void imprimir(struct No *head){
+void listar(struct No *head){
     struct No *aux = head; // criamos um ponteiro auxiliar que aponta para o head da struct No
     while (aux != NULL){ // enquanto o auxiliar não for null
         printf("%d -> ", aux -> valor); // auxiliar recebe o valor que está na posição em que ele está
@@ -45,7 +45,7 @@ int main(){
     // por fim, 5 passou a apontar para para 20, que aponta para 10, que aponta para null
     inserirInicio(&head, 8);
 
-    imprimir(head);
+    listar(head);
 
     return 0;
 };
