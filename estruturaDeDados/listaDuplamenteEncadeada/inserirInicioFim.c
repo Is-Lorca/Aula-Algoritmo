@@ -19,20 +19,22 @@ void inserirInicio(struct No **head, int x){
 }
 
 void inserirFinal(struct No **head, int x){
-    if(*head == NULL){
-        *head = novo;
-    }
     struct No *novo = malloc(sizeof(struct No));
     novo -> valor = x;
     novo -> ant = NULL;
     novo -> prox = NULL;
-
+    if(*head == NULL){
+        *head = novo;
+        return; // esse era o erro! ele continuava executando
+    }
     struct No *aux = *head;
+
     while(aux -> prox != NULL){
         aux = aux -> prox;
     }
+
     novo -> ant = aux;
-    aux -> prox = novo;
+    aux -> prox = novo; // chegava aqui e ele apontava para ele mesmo! nunca entrando no while!
 }
 
 void listar(struct No *head){
@@ -42,7 +44,7 @@ void listar(struct No *head){
         printf("%d <-> ", aux -> valor);
         aux = aux -> prox;
     }
-    printf("NULL");
+    printf("NULL\n");
 }
 
 int main(){
@@ -53,11 +55,11 @@ int main(){
     inserirInicio(&head, 12);
     inserirInicio(&head, 14);
 
-    // listar(head);
+    listar(head);
 
     inserirFinal(&head, 4);
     inserirFinal(&head, 2);
-    // inserirFinal(&head, 0);
+    inserirFinal(&head, 0);
     listar(head);
 
 
