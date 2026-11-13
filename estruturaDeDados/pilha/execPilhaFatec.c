@@ -46,25 +46,20 @@ void listar(struct No *topo){
     printf("NULL\n");
 }
 
-void top(struct No *topo){
-    struct No *aux = topo;
-    printf("%c -> ", aux -> letra);
-}
-
 int main(){
     struct No *topo = NULL;
     struct No *outro = NULL;
 
     char letraInsert;
 
-    push(&topo, 'f'); // C
-    push(&topo, 'a'); // E
-    push(&topo, 't'); // T
-    push(&topo, 'e'); // A
-    push(&topo, 'c'); // F
+    push(&topo, 'f'); // C  |
+    push(&topo, 'a'); // E  |
+    push(&topo, 't'); // T  | -> Resultado da pilha
+    push(&topo, 'e'); // A  |
+    push(&topo, 'c'); // F  |
     
     // C E T A F
-    // F A T E C -> ainda não consegui
+    // F A T E C
 
     listar(topo);
 
